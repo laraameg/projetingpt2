@@ -1,0 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+.seletor{ 
+  position:absolute; left: 820px; top: 550px; display: flex; flex-wrap: wrap; width: 80px; row-gap: 10px; 
+}
