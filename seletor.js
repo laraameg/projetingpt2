@@ -3,12 +3,17 @@ class Seletor{
         this.menu = createRadio();
         this.menu.class("seletor");
         this.menu.option("aleatorio")
-        this.menu.option("som 1")
-        this.menu.option("som 2")
-        this.menu.option("som 3")
-        this.menu.option("som 4")
-        this.menu.option("som 5")
+        this.menu.option("rosa")
+        this.menu.option("azul")
+        this.menu.option("verde")
+        this.menu.option("salmão")
+        this.menu.option("amarelo")
         this.menu.selected("aleatorio")
         
+        this.menu2 = createRadio();
+        this.menu2.class("seletor2");
+        this.menu2.option("bloco temporário");
+        this.menu2.option("bloco permanente");
+        this.menu2.selected("bloco temporário");
     }
 }

@@ -1,10 +1,27 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
+
 canvas {
   display: block;
 }
-.seletor{ 
-  position:absolute; left: 820px; top: 550px; display: flex; flex-wrap: wrap; width: 80px; row-gap: 10px; 
+
+.seletor {
+  position: absolute;
+  left: 820px;
+  top: 440px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.seletor2 {
+  position: absolute;
+  left: 900px;
+  top: 440px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }

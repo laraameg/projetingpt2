@@ -3,11 +3,11 @@ var bloco
 var blocos
 var a = "pink"
 var b = "aquamarine"
-var d = "lightGreen"
-var e = "lightSalmon"
-var f = "paleVioletRed"
-var g = "LemonChiffon"
-var cores = [a, b, d, e, f, g]
+var d = "lightgreen"
+var e = "lightsalmon"
+var f = "palevioletred" //removemos
+var g = "lemonchiffon"
+var cores = [a, b, d, e, g]
 var s1
 var s2
 var s3
@@ -16,6 +16,7 @@ var s5
 var s6
 var sons, seletor
 var clique = false;
+var reset;
 
 function preload() {
     s1 = loadSound("s1.mp3")
@@ -38,6 +39,17 @@ function setup() {
     blocos = new Group()
 
     seletor = new Seletor();
+
+    reset = createImg("reset.png");
+    reset.size(50,50);
+    reset.position(800,0);
+    reset.mouseClicked(() => {
+        blocos.destroyEach();
+        bola.sprite.position.x = 400;
+        bola.sprite.position.y = 400;
+        bola.sprite.setVelocity(0,0);
+        bola.sprite.tint = "white";
+    })
 }
 
 function draw() {
@@ -64,32 +76,32 @@ function draw() {
         var cor;
 
         switch (selecionado) {
-            case "som 1":
+            case "rosa":
                 cor = a
                 break;
             case "aleatorio":
                 cor = random(cores);
                 break;
-            case "som 2":
+            case "azul":
                 cor = cores[1]
-                break;  
-            case "som 3":
+                break;
+            case "verde":
                 cor = cores[2]
                 break;
-            case "som 4":
-                cor = cores[2]
-                break;
-            case "som 5":
+            case "salmão":
                 cor = cores[3]
+                break;
+            case "amarelo":
+                cor = cores[4]
                 break;
             default:
                 console.error("error")
                 break;
         }
-    bloco = new Bloco(cor);
-    //cor
-    bloco.sprite.depth = 0;
-    blocos.add(bloco.sprite);
+        bloco = new Bloco(cor);
+        //cor
+        bloco.sprite.depth = 0;
+        blocos.add(bloco.sprite);
     }
 
 }

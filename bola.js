@@ -33,9 +33,6 @@ class Bola {
             case cores[4]:
                 sons[4].play();
                 break;
-            case cores[5]:
-                sons[5].play();
-                break;
             default:
                 console.error("error " + outro)
                 break;
